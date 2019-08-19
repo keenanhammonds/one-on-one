@@ -10,14 +10,17 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header>
+       <header className="headerContainer">
         <h1>App</h1>
       </header>
-      <Search />
+      <Search className="searchContainer"/>
       <main>
         <Route path="/" exact component={Home} />
         <Route path="/compare" component={Comparison} />
       </main>
+      <footer className="footerContainer">
+
+      </footer>
     </div>
   );
 }
