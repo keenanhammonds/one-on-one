@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "./Card"
 import axios from "axios"
+import Match from './Match'
 
  const player1 = {
   "_id": "5d5c3d55ceccb90004dfd3f2",
@@ -48,22 +49,7 @@ class Comparison extends Component {
     }
   }
   componentDidMount(){
-    // let play1 = "Kobe Bryant"
-    // let play2 ="Michael Jordan"
-  //   let startDate1 = this.state.player1.startDate
-  //   let endDate1 = this.state.player1.endDate
-  //   let startDate2 = this.state.player2.startDate
-  //   let endDate2 = this.state.player2.endDate
-  // //   axios.get(`https://basketball-era.herokuapp.com/${play1}`)
-  //     .then(res => {
-  //       this.setState({player1: res.data})
-  //     })
-      
-  //  axios.get(`https://basketball-era.herokuapp.com/${play2}`) 
-  //     .then(res => {
-  //       this.setState({player2: res.data})
-  //     })
-  
+    
   // get ppg
   axios.get(`https://basketball-era.herokuapp.com/ppg/ppg/${player1.startYear}/${player1.endYear}`)   
     .then( res => {
@@ -119,6 +105,9 @@ class Comparison extends Component {
       <div className="cardsContainer">
         <Card />
         <Card />
+        <div>
+        <Match  type="ppg" player1 = {player1.ppg} player2 = {player2.ppg} era1={this.state.ppg1} era2 = {this.state.ppg2}/>
+        </div>
       </div>
     );
   }
