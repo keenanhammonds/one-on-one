@@ -4,15 +4,15 @@ import axios from "axios"
 import Match from './Match'
 
  const player1 = {
-  "_id": "5d5c3d55ceccb90004dfd3f2",
-  "name": "Kareem Abdul-Jabbar",
-  "ppg": 24.6,
-  "apg": 3.6,
-  "rpg": 7.9,
-  "spg": 0.7,
-  "bpg": 2,
-  "startYear": 1969,
-  "endYear": 1988,
+  "_id": "5d5c59b595824f00049e5ef2",
+  "name": "Wilt Chamberlain",
+  "ppg": 30.1,
+  "apg": 4.4,
+  "rpg": 0,
+  "spg": null,
+  "bpg": null,
+  "startYear": 1959,
+  "endYear": 1972,
   "__v": 0
 }
  const player2 = {
@@ -107,6 +107,10 @@ class Comparison extends Component {
         <Card />
         <div>
         <Match  type="ppg" player1 = {player1.ppg} player2 = {player2.ppg} era1={this.state.ppg1} era2 = {this.state.ppg2}/>
+        <Match  type="apg" player1 = {player1.apg} player2 = {player2.apg} era1={this.state.apg1} era2 = {this.state.apg2}/>
+        <Match  type="rpg" player1 = {player1.rpg} player2 = {player2.rpg} era1={this.state.rpg1} era2 = {this.state.rpg2}/>
+        <Match  type="spg" player1 = {player1.spg} player2 = {player2.spg} era1={this.state.spg1} era2 = {this.state.spg2}/>
+        <Match  type="bpg" player1 = {player1.bpg} player2 = {player2.bpg} era1={this.state.bpg1} era2 = {this.state.bpg2}/>
         </div>
       </div>
     );
