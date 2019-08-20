@@ -4,6 +4,7 @@ import Search from "./Components/Search";
 import Comparison from "./Components/Comparison"
 import Home from "./Components/Home"
 import {Route, Link} from 'react-router-dom'
+import Card from "./Components/Card"
 import "./App.css";
 
 class App extends Component {

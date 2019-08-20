@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Card from "./Card"
 
 class Comparison extends Component {
   render() {
     return (
-      <div>
-        <h1>Main</h1>
+      <div className="cardsContainer">
+        <Card />
+        <Card />
       </div>
     );
   }
