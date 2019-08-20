@@ -1,3 +1,21 @@
+ <div className="App">
+        
+   <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand"></a>
+    <img src={logo} width="100" height="80"/>
+    <div class="search">
+  <span class="fa fa-search"></span>
+  <input placeholder="Search for a player"/>
+  </div>
+</nav>
+
+
+        {/* main middle container */}
+<main className="mainContainer">
+    <Route path="/" exact render={routerProps => <Home />} />
+    <Route path="/compare" exact render={routerProps => <Comparison />} />
+</main>
+
 @import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
@@ -77,3 +95,11 @@ button{
 .App{
   font-family: 'Archivo', sans-serif;
 }
+
+
+
+
+  {/* footer */}
+        <footer className="footerContainer">
+        <h1>footer</h1>
+        </footer>

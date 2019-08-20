@@ -1,35 +1,41 @@
 import React, { Component } from "react";
 
 class Search extends Component {
+  constructor() {
+    super();
+    this.state = {
+      search: ""
+    };
+  }
+
+  handleChange = evt => {
+    this.setState({
+      search: [evt.target.value]
+    });
+  };
+
+  handleClick = evt => {
+    evt.preventDefault();
+    this.searchPlayer();
+  };
+
+  searchPlayer = () => {
+    console.log("searching");
+  };
+
   render() {
     return (
       <div>
-        <h1>Search</h1>
-        <input type="text" placeholder="player name"/>
-        <input type="button" value="Search" />
+        <h3>Find A Player</h3>
+        <input
+            className="search"
+          type="text"
+          placeholder="player name"
+          onChange={this.handleChange}
+        />
+          <button className='lined-thin' onClick={this.handleClick}>Search</button>
+
         <ul>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
-          <li>Player</li>
         </ul>
       </div>
     );
