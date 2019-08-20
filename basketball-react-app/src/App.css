@@ -5,6 +5,12 @@
   grid-template-columns: 300px auto;
   grid-template-rows: 100px 540px auto;
   font-family: 'Archivo', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
 }
 
 
@@ -70,18 +76,3 @@ button{
   height: 30px;
   width: 200px;
 }
-
-.App{
-  font-family: 'Archivo', sans-serif;
-}
-.background-video{
-
-  height: 100%;
-  width: 100%;
-  float: left;
-  top: 0;
-  padding: none;
-  position: fixed; /* optional depending on what you want to do in your app */
-  
-  
-  }
