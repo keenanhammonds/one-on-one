@@ -5,6 +5,12 @@
   grid-template-columns: 300px auto;
   grid-template-rows: 100px 540px auto;
   font-family: 'Archivo', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
 }
 
 
@@ -69,8 +75,4 @@ button{
   margin:0 1rem;
   height: 30px;
   width: 200px;
-}
-
-.App{
-  font-family: 'Archivo', sans-serif;
 }
