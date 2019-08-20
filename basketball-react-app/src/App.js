@@ -4,9 +4,15 @@ import Search from "./Components/Search";
 import Comparison from "./Components/Comparison"
 import Home from "./Components/Home"
 import {Route, Link} from 'react-router-dom'
-import "./App.css";
+import "./App.css"; 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      players: []
+    }
+  }
   render() {
     return (
       <div className="App">

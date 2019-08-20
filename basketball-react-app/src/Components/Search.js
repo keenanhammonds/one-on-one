@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class Search extends Component {
   constructor() {
     super();
+    // hold the state of the search input 
     this.state = {
-      search: ""
+      search: "",
+      players: []
     };
   }
 
@@ -19,11 +22,26 @@ class Search extends Component {
     this.searchPlayer();
   };
 
-  searchPlayer = () => {
-    console.log("searching");
-  };
+  getData = () => {
+    axios.get("https://basketball-era.herokuapp.com")
+    .then(res => {
+      this.setState({
+        players: [res.data]
+      })
+      console.log(res.data)
+    })
+  }
+
+  componentDidMount(){
+    this.getData()
+
+  }
+
+  // searchPlayer = () => {
+  // };
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <h3>Find A Player</h3>
