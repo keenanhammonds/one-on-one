@@ -3,7 +3,7 @@ import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison"
 import Home from "./Components/Home"
-import {BrowserRouter as Route, Link} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import "./App.css";
 
 class App extends Component {
@@ -11,14 +11,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="headerContainer">
-          <h1>App</h1>
+          <Link to="/">
+          <h1>Header</h1>
+          </Link>
         </header>
         <Search className="searchContainer" />
-        <main>
-          <Route path="/" exact component={Home} />
-          <Route path="/compare" component={Comparison} />
+        <main className="mainContainer">
+          <Route path="/" exact render={routerProps => <Home />} />
+          <Route path="/compare" exact render={routerProps => <Comparison />} />
         </main>
-        <footer className="footerContainer" />
+        <footer className="footerContainer">
+        <h1>footer</h1>
+        </footer>
       </div>
     );
   }
