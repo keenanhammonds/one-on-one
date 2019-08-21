@@ -36,80 +36,68 @@ class Comparison extends Component {
 
     this.state= {
       
-      player1:{
-         ppg1: [],
-         apg1: [],
-         rpg1: [],
-         bpg1: [],
-         spg1: []
-      },
-      player2:{
-         ppg2: [],
-         apg2: [],
-         rpg2: [],
-         bpg2: [],
-         spg2: []  
+      player1:[],
+      player2:[]
     }
-  }
   }
   componentDidMount(){
     
-  // get ppg
-  axios.get(`https://basketball-era.herokuapp.com/ppg/ppg/${player1.startYear}/${player1.endYear}`)   
+  // get yearavgs
+  axios.get(`https://basketball-era.herokuapp.com/yearavg/yearavg/${player1.startYear}/${player1.endYear}`)   
     .then( res => {
-      this.setState({player1:{ppg1: res.data}})
+      this.setState({player1: res.data})
     })
-   axios.get(`https://basketball-era.herokuapp.com/ppg/ppg/${player2.startYear}/${player2.endYear}`)   
+   axios.get(`https://basketball-era.herokuapp.com/yearavg/yearavg/${player2.startYear}/${player2.endYear}`)   
     .then( res => {
-      this.setState({player2: {ppg2: res.data}})
+      this.setState({player2:  res.data})
     })  
 
-    // get apg
-  axios.get(`https://basketball-era.herokuapp.com/apg/apg/${player1.startYear}/${player1.endYear}`)   
-    .then( res => {
-      this.setState({player1:{apg1: res.data}})
-    })
-  axios.get(`https://basketball-era.herokuapp.com/apg/apg/${player2.startYear}/${player2.endYear}`)   
-    .then( res => {
-      this.setState({player2: {apg2: res.data}})
-    })
+  //   // get apg
+  // axios.get(`https://basketball-era.herokuapp.com/apg/apg/${player1.startYear}/${player1.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player1:{apg1: res.data}})
+  //   })
+  // axios.get(`https://basketball-era.herokuapp.com/apg/apg/${player2.startYear}/${player2.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player2: {apg2: res.data}})
+  //   })
 
-    // get rpg
-    axios.get(`https://basketball-era.herokuapp.com/rpg/rpg/${player1.startYear}/${player1.endYear}`)   
-    .then( res => {
-      this.setState({player1:{rpg1: res.data}})
-    })
-  axios.get(`https://basketball-era.herokuapp.com/rpg/rpg/${player2.startYear}/${player2.endYear}`)   
-    .then( res => {
-      this.setState({player2: {rpg2: res.data}})
-    })
+  //   // get rpg
+  //   axios.get(`https://basketball-era.herokuapp.com/rpg/rpg/${player1.startYear}/${player1.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player1:{rpg1: res.data}})
+  //   })
+  // axios.get(`https://basketball-era.herokuapp.com/rpg/rpg/${player2.startYear}/${player2.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player2: {rpg2: res.data}})
+  //   })
 
-    // get bpg 
-    axios.get(`https://basketball-era.herokuapp.com/bpg/bpg/${player1.startYear}/${player1.endYear}`)   
-    .then( res => {
-      this.setState({player1:{bpg1: res.data}})
-    })
-  axios.get(`https://basketball-era.herokuapp.com/bpg/bpg/${player2.startYear}/${player2.endYear}`)   
-    .then( res => {
-      this.setState({player2: {bpg2: res.data}})
-    })
+  //   // get bpg 
+  //   axios.get(`https://basketball-era.herokuapp.com/bpg/bpg/${player1.startYear}/${player1.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player1:{bpg1: res.data}})
+  //   })
+  // axios.get(`https://basketball-era.herokuapp.com/bpg/bpg/${player2.startYear}/${player2.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player2: {bpg2: res.data}})
+  //   })
 
-    // get spg 
-    axios.get(`https://basketball-era.herokuapp.com/spg/spg/${player1.startYear}/${player1.endYear}`)   
-    .then( res => {
-      this.setState({player1:{spg1: res.data}})
-    })
-  axios.get(`https://basketball-era.herokuapp.com/spg/spg/${player2.startYear}/${player2.endYear}`)   
-    .then( res => {
-      this.setState({player2: {spg2: res.data}})
-    })
+  //   // get spg 
+  //   axios.get(`https://basketball-era.herokuapp.com/spg/spg/${player1.startYear}/${player1.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player1:{spg1: res.data}})
+  //   })
+  // axios.get(`https://basketball-era.herokuapp.com/spg/spg/${player2.startYear}/${player2.endYear}`)   
+  //   .then( res => {
+  //     this.setState({player2: {spg2: res.data}})
+  //   })
   }
   render() {
     return (
       <div>
       <div className="cardsContainer">
-        <PlayerMatch/>
-        <PlayerMatch/>
+        <PlayerMatch player = {player1} data ={this.state.player1}/>
+        {/* <PlayerMatch player = {player2} data ={this.state.player2}/> */}
         </div>
         <div>
         {/* <Match  type="ppg" player1 = {player1.ppg} player2 = {player2.ppg} era1={this.state.ppg1} era2 = {this.state.ppg2}/>

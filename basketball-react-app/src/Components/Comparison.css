@@ -7,7 +7,7 @@
 .cardsContainer {
     height: 200px;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
     /* display: flex; */
     /* justify-content: space-evenly; */
 }

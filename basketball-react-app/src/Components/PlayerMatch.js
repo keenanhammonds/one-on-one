@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Card from './Card'
-// import Match2 from './Match2'
+import Match2 from './Match2'
 
 class PlayerMatch extends Component {
 
@@ -8,7 +8,7 @@ class PlayerMatch extends Component {
         return(
             <div>
                 <Card/>
-                {/* <Match2/> */}
+                <Match2 player = {this.props.player} data = {this.props.data}/>
             </div>
         )
     }
