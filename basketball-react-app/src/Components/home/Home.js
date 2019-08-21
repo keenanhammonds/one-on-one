@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
      return (
      
-<div class="container">
+<div className="container">
   
     {/* <video id="video" width="1800" height="-860" loop muted autoPlay>
         <source src={video} type="video/mp4" />
