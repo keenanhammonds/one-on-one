@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Card from "./Card"
+import Card from "./Card";
 
 class Comparison extends Component {
   render() {
-    //save the player data to variable
+    //save the list of player objects to variable
     const playerData = this.props.players;
-    console.log(playerData)
     return (
       <div className="cardsContainer">
         <Card />

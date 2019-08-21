@@ -18,7 +18,7 @@ class App extends Component {
   getData = () => {
     axios.get("https://basketball-era.herokuapp.com").then(res => {
       this.setState({
-        players: [res.data]
+        players: res.data
       });
     });
   };
@@ -35,7 +35,7 @@ class App extends Component {
             <h1>Header</h1>
           </Link>
         </header>
-        <Search className="searchContainer" />
+        <Search players={this.state.players}className="searchContainer" />
         <main className="mainContainer">
           <Route path="/" exact render={routerProps => <Home />} />
           <Route path="/compare" exact render={routerProps => <Comparison players={this.state.players} />} />
