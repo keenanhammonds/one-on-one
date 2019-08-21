@@ -52,7 +52,7 @@ class App extends Component {
           players={this.state.players}
           className="searchContainer"
         />
-        <main className="mainContainer">
+        <main >
           <Route path="/" exact render={routerProps => <Home />} />
           <Route
             path="/compare"
