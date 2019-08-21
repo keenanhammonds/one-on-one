@@ -11,10 +11,7 @@ class Home extends Component {
     <video id="video" width="1800" height="-860" loop muted autoPlay>
         <source src={video} type="video/mp4" />
     </video>
-    <div class="overlay">
-    <Link to="/compare"><h1>Compare Your Favorite Players</h1></Link>
-        
-    </div>
+
 </div>
    
       );
