@@ -5,7 +5,6 @@ import Comparison from "./Components/Comparison";
 import Home from "./Components/home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
-// import { chmod } from "fs";
 
 class App extends Component {
   constructor() {
@@ -15,6 +14,8 @@ class App extends Component {
       matchup: []
     };
   }
+
+
 
   handleClick = (player, evt) => {
     evt.preventDefault();

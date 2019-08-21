@@ -1,0 +1,16 @@
+
+
+.smallCard{
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+}
+
+.searchContainer{
+    display: flex;
+    flex-flow: wrap
+}
+
+.search{
+    padding-left: 40px;
+}
