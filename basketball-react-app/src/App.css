@@ -15,23 +15,13 @@
 }
 
 
-.headerContainer {
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 3
-}
 
 .searchContainer {
   grid-column-start: 1;
   grid-row-start: 2;
 }
 
-.footerContainer {
-  text-align: center;
-  align-self: end;
-  grid-column-start: 1;
-  grid-column-end: 3
-}
+
 
 .card{
   height: 300px;

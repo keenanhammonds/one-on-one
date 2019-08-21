@@ -3,6 +3,8 @@ import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison";
 import Home from "./Components/home/Home";
+import Header from "./Components/header/Header";
+import Footer from "./Components/footer/Footer";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 // import { chmod } from "fs";

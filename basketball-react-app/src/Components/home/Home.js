@@ -10,9 +10,9 @@ class Home extends Component {
      
 <div class="container">
   
-    {/* <video id="video" width="1800" height="-860" loop muted autoPlay>
+     <video id="video" width="1200" height="-830" loop muted autoPlay>
         <source src={video} type="video/mp4" />
-    </video> */}
+    </video> 
 
 </div>
    

@@ -1,0 +1,6 @@
+.footerContainer {
+    text-align: center;
+    align-self: end;
+    grid-column-start: 1;
+    grid-column-end: 3
+  }
