@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Card from "./Card"
 import axios from "axios"
 import Match from './Match'
+import './Comparison.css'
 
  const player1 = {
   "_id": "5d5c59b595824f00049e5ef2",
@@ -101,11 +102,9 @@ class Comparison extends Component {
     })
   }
   render() {
-    //save the list of player objects to variable
-    const playerData = this.props.players;
     return (
       <div className="cardsContainer">
-        <Card />
+        <Card    />
         <Card />
         <div>
         <Match  type="ppg" player1 = {player1.ppg} player2 = {player2.ppg} era1={this.state.ppg1} era2 = {this.state.ppg2}/>
