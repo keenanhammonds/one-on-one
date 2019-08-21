@@ -31,11 +31,98 @@ class Match2 extends Component {
            ppgDif =ppgPercentDif.toFixed(1) 
         } 
         
-        // let era1Avg = era1Sum/this.props.era1.length
-        // let percentEra1 = ((this.props.player1 - era1Avg)/era1Avg)*100
+       //creates the apg numbers
+       let apgEraSum = 0 
+       let apgYearCount = 0
 
+       this.props.data.forEach( year => {
+           if(year.avgApg != null){
+               apgEraSum += year.avgApg
+               apgYearCount ++
+           }
+       })
+       
+       let apgEraAvg
+       let apgPercentDif
+       let apgEra
+       let apgDif        
 
-        
+       if(apgEraSum != 0){
+          apgEraAvg =  apgEraSum/apgYearCount
+          apgEra = apgEraAvg.toFixed(1)
+          apgPercentDif = ((this.props.player.apg - apgEraAvg)/apgEraAvg)*100
+          apgDif =apgPercentDif.toFixed(1) 
+       }
+
+//creates the rpg numbers
+       let rpgEraSum = 0 
+       let rpgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgRpg != null){
+               rpgEraSum += year.avgRpg
+               rpgYearCount ++
+           }
+       })
+       
+       let rpgEraAvg
+       let rpgPercentDif
+       let rpgEra
+       let rpgDif        
+
+       if(rpgEraSum != 0){
+          rpgEraAvg =  rpgEraSum/rpgYearCount
+          rpgEra = rpgEraAvg.toFixed(1)
+          rpgPercentDif = ((this.props.player.rpg - rpgEraAvg)/rpgEraAvg)*100
+          rpgDif =rpgPercentDif.toFixed(1) 
+       }       
+
+       //creates the bpg numbers
+       let bpgEraSum = 0 
+       let bpgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgBpg != null){
+               bpgEraSum += year.avgBpg
+               bpgYearCount ++
+           }
+       })
+       
+       let bpgEraAvg
+       let bpgPercentDif
+       let bpgEra
+       let bpgDif        
+
+       if(bpgEraSum != 0){
+          bpgEraAvg =  bpgEraSum/bpgYearCount
+          bpgEra = bpgEraAvg.toFixed(1)
+          bpgPercentDif = ((this.props.player.bpg - bpgEraAvg)/bpgEraAvg)*100
+          bpgDif =bpgPercentDif.toFixed(1) 
+       }       
+
+       //creates the spg numbers
+       let spgEraSum = 0 
+       let spgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgSpg != null){
+               spgEraSum += year.avgSpg
+               spgYearCount ++
+           }
+       })
+       
+       let spgEraAvg
+       let spgPercentDif
+       let spgEra
+       let spgDif        
+
+       if(spgEraSum != 0){
+          spgEraAvg =  spgEraSum/spgYearCount
+          spgEra = spgEraAvg.toFixed(1)
+          spgPercentDif = ((this.props.player.spg - spgEraAvg)/spgEraAvg)*100
+          spgDif =spgPercentDif.toFixed(1) 
+       }
+
         return(
             <div className= "grid">
                 <span></span>
@@ -47,7 +134,28 @@ class Match2 extends Component {
                 <div>{this.props.player.ppg}</div>
                 <div>{ppgEra}</div>
                 <div>{ppgDif}%</div>
+
+                <div>APG:</div>
+                <div>{this.props.player.apg}</div>
+                <div>{apgEra}</div>
+                <div>{apgDif}%</div>
+
                 
+                <div>RPG:</div>
+                <div>{this.props.player.rpg}</div>
+                <div>{rpgEra}</div>
+                <div>{rpgDif}%</div>
+
+                <div>BPG:</div>
+                <div>{this.props.player.bpg}</div>
+                <div>{bpgEra}</div>
+                <div>{bpgDif}%</div>                                                            
+
+                <div>SPG:</div>
+                <div>{this.props.player.spg}</div>
+                <div>{spgEra}</div>
+                <div>{spgDif}%</div>                                                            
+
             </div>
         )
     }    

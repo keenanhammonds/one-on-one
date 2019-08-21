@@ -10,7 +10,7 @@ import PlayerMatch from './PlayerMatch'
   "name": "Wilt Chamberlain",
   "ppg": 30.1,
   "apg": 4.4,
-  "rpg": 0,
+  "rpg": 22.9,
   "spg": null,
   "bpg": null,
   "startYear": 1959,
@@ -97,7 +97,7 @@ class Comparison extends Component {
       <div>
       <div className="cardsContainer">
         <PlayerMatch player = {player1} data ={this.state.player1}/>
-        {/* <PlayerMatch player = {player2} data ={this.state.player2}/> */}
+        <PlayerMatch player = {player2} data ={this.state.player2}/>
         </div>
         <div>
         {/* <Match  type="ppg" player1 = {player1.ppg} player2 = {player2.ppg} era1={this.state.ppg1} era2 = {this.state.ppg2}/>
