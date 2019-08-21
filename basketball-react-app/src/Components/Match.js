@@ -1,39 +1,164 @@
+//Created to put the match stuff into their own components that are full cards
+
 import React, {Component} from 'react'
-
-class Match extends Component {
-
+import './Match2.css'
+class Match2 extends Component {
+    componentDidMount(){
+        
+    }
     render(){
-        let era1Sum = 0 
-        
-        this.props.era1.forEach( year => {
-            era1Sum += year.avg
-        })
-        let era1Avg = era1Sum/this.props.era1.length
-        let percentEra1 = ((this.props.player1 - era1Avg)/era1Avg)*100
+       
+       //creates the ppg numbers
+        let ppgEraSum = 0 
+        let ppgYearCount = 0
 
-
-        let era2Sum = 0 
-        
-        this.props.era2.forEach( year => {
-            era2Sum += year.avg
+        this.props.data.forEach( year => {
+            if(year.avgPpg != null){
+                ppgEraSum += year.avgPpg
+                ppgYearCount ++
+            }
         })
-        let era2Avg = era2Sum/this.props.era2.length
-        let percentEra2 = ((this.props.player2 - era2Avg)/era2Avg)*100
-        console.log(this.props.era1)
+        
+        let ppgEraAvg
+        let ppgPercentDif
+        let ppgEra
+        let ppgDif        
+
+        if(ppgEraSum != 0){
+           ppgEraAvg =  ppgEraSum/ppgYearCount
+           ppgEra = ppgEraAvg.toFixed(1)
+           ppgPercentDif = ((this.props.player.ppg - ppgEraAvg)/ppgEraAvg)*100
+           ppgDif =ppgPercentDif.toFixed(1) 
+        } 
+        
+       //creates the apg numbers
+       let apgEraSum = 0 
+       let apgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgApg != null){
+               apgEraSum += year.avgApg
+               apgYearCount ++
+           }
+       })
+       
+       let apgEraAvg
+       let apgPercentDif
+       let apgEra
+       let apgDif        
+
+       if(apgEraSum != 0){
+          apgEraAvg =  apgEraSum/apgYearCount
+          apgEra = apgEraAvg.toFixed(1)
+          apgPercentDif = ((this.props.player.apg - apgEraAvg)/apgEraAvg)*100
+          apgDif =apgPercentDif.toFixed(1) 
+       }
+
+//creates the rpg numbers
+       let rpgEraSum = 0 
+       let rpgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgRpg != null){
+               rpgEraSum += year.avgRpg
+               rpgYearCount ++
+           }
+       })
+       
+       let rpgEraAvg
+       let rpgPercentDif
+       let rpgEra
+       let rpgDif        
+
+       if(rpgEraSum != 0){
+          rpgEraAvg =  rpgEraSum/rpgYearCount
+          rpgEra = rpgEraAvg.toFixed(1)
+          rpgPercentDif = ((this.props.player.rpg - rpgEraAvg)/rpgEraAvg)*100
+          rpgDif =rpgPercentDif.toFixed(1) 
+       }       
+
+       //creates the bpg numbers
+       let bpgEraSum = 0 
+       let bpgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgBpg != null){
+               bpgEraSum += year.avgBpg
+               bpgYearCount ++
+           }
+       })
+       
+       let bpgEraAvg
+       let bpgPercentDif
+       let bpgEra
+       let bpgDif        
+
+       if(bpgEraSum != 0){
+          bpgEraAvg =  bpgEraSum/bpgYearCount
+          bpgEra = bpgEraAvg.toFixed(1)
+          bpgPercentDif = ((this.props.player.bpg - bpgEraAvg)/bpgEraAvg)*100
+          bpgDif =bpgPercentDif.toFixed(1) 
+       }       
+
+       //creates the spg numbers
+       let spgEraSum = 0 
+       let spgYearCount = 0
+
+       this.props.data.forEach( year => {
+           if(year.avgSpg != null){
+               spgEraSum += year.avgSpg
+               spgYearCount ++
+           }
+       })
+       
+       let spgEraAvg
+       let spgPercentDif
+       let spgEra
+       let spgDif        
+
+       if(spgEraSum != 0){
+          spgEraAvg =  spgEraSum/spgYearCount
+          spgEra = spgEraAvg.toFixed(1)
+          spgPercentDif = ((this.props.player.spg - spgEraAvg)/spgEraAvg)*100
+          spgDif =spgPercentDif.toFixed(1) 
+       }
+
         return(
-            <div>
-                <div>{this.props.type}:</div>
-                <div>{this.props.player1}</div>
-                <div>{era1Avg.toFixed(1)}</div>
-                <div>{percentEra1.toFixed(1)}</div>
-            
-                <div>{this.props.type}:</div>
-                <div>{this.props.player2}</div>
-                <div>{era2Avg.toFixed(1)}</div>
-                <div>{percentEra2.toFixed(1)}</div>
+            <div className= "grid">
+                <span></span>
+                <span>Player</span>
+                <span>Era</span>
+                <span>% Difference</span>
+                
+                <div>PPG:</div>
+                <div>{this.props.player.ppg}</div>
+                <div>{ppgEra}</div>
+                <div>{ppgDif}%</div>
+
+                <div>APG:</div>
+                <div>{this.props.player.apg}</div>
+                <div>{apgEra}</div>
+                <div>{apgDif}%</div>
+
+                
+                <div>RPG:</div>
+                <div>{this.props.player.rpg}</div>
+                <div>{rpgEra}</div>
+                <div>{rpgDif}%</div>
+
+                <div>BPG:</div>
+                <div>{this.props.player.bpg}</div>
+                <div>{bpgEra}</div>
+                <div>{bpgDif}%</div>                                                            
+
+                <div>SPG:</div>
+                <div>{this.props.player.spg}</div>
+                <div>{spgEra}</div>
+                <div>{spgDif}%</div>                                                            
+
             </div>
         )
     }    
 }
 
-export default Match
+export default Match2

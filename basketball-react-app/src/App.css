@@ -39,11 +39,7 @@
 }
 
 
-.cardsContainer{
-  height: 350px;
-  display: flex;
-  justify-content: space-evenly;
-}
+
 button{
   align-self:center;
   background:transparent;
