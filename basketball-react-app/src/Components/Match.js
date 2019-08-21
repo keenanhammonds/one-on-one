@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react'
 import './Match2.css'
-import axios from 'axios'
+
 
 
 class Match2 extends Component {
@@ -135,7 +135,7 @@ class Match2 extends Component {
             <div className= "grid">
                 <span></span>
                 <span>Player</span>
-                <span>Era</span>
+                <span>Top for Era</span>
                 <span>% Difference</span>
                 
                 <div>PPG:</div>
