@@ -101,6 +101,8 @@ class Comparison extends Component {
     })
   }
   render() {
+    //save the list of player objects to variable
+    const playerData = this.props.players;
     return (
       <div className="cardsContainer">
         <Card />
