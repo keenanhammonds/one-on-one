@@ -9,21 +9,29 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="headerContainer">
-          <Link to="/">
-          <h1>Header</h1>
-          </Link>
-        </header>
-        <Search className="searchContainer" />
+      // header navbar 
+      <div className="container">
+          
+        <nav class="navbar sticky-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+        </a>
+        <li>HOME</li>
+        <Link to="/compare" className="navbar-brand">ONExONE</Link>
+        </nav>
+
+
+{/* main  */}
         <main className="mainContainer">
           <Route path="/" exact render={routerProps => <Home />} />
           <Route path="/compare" exact render={routerProps => <Comparison />} />
         </main>
+
+        {/* footer */}
         <footer className="footerContainer">
         <h1>footer</h1>
         </footer>
       </div>
+     
     );
   }
 }
