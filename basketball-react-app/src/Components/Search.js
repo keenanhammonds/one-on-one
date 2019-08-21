@@ -1,42 +1,61 @@
 import React, { Component } from "react";
+import axios from "axios";
+// import { userInfo } from "os";
 
 class Search extends Component {
   constructor() {
     super();
+    // hold the state of the search input
     this.state = {
       search: ""
     };
   }
 
-  handleChange = evt => {
+  searchChange = evt => {
     this.setState({
-      search: [evt.target.value]
+      search: evt.target.value
     });
+    console.log(this.state);
   };
 
   handleClick = evt => {
     evt.preventDefault();
-    this.searchPlayer();
-  };
-
-  searchPlayer = () => {
-    console.log("searching");
   };
 
   render() {
+    const { search } = this.state;
+    const { players } = this.props;
+    const filteredPlayers = players.filter(player => {
+      return player.name
+        .toLowerCase()
+        .includes(this.state.search.toLowerCase());
+    });
+    const playerArr = [];
+    const showPlayers = filteredPlayers.map(player => {
+      playerArr.push(player.name);
+      if (playerArr.length < 12) {
+        return (
+          <div>
+            <a>
+              <h3>{player.name}</h3>
+            </a>
+          </div>
+        );
+      }
+    });
     return (
       <div>
         <h3>Find A Player</h3>
         <input
-            className="search"
+          className="search"
           type="text"
           placeholder="player name"
-          onChange={this.handleChange}
+          onChange={this.searchChange}
         />
-          <button className='lined-thin' onClick={this.handleClick}>Search</button>
-
-        <ul>
-        </ul>
+        <button className="lined-thin" onClick={this.handleClick}>
+          Search
+        </button>
+        <div>{showPlayers}</div>
       </div>
     );
   }
