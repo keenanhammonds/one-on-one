@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');
 
 .App {
@@ -18,10 +19,6 @@
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3
-}
-
-.mainContainer{
-  border: 2px solid black;
 }
 
 .searchContainer {
