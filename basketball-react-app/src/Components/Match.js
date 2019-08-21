@@ -2,10 +2,18 @@
 
 import React, {Component} from 'react'
 import './Match2.css'
+import axios from 'axios'
+
+
 class Match2 extends Component {
-    componentDidMount(){
-        
+    constructor(){
+        super()
+
+        this.state = {
+            data: []
+        }
     }
+    
     render(){
        
        //creates the ppg numbers
@@ -13,7 +21,7 @@ class Match2 extends Component {
         let ppgYearCount = 0
 
         this.props.data.forEach( year => {
-            if(year.avgPpg != null){
+            if(year.avgPpg !== null){
                 ppgEraSum += year.avgPpg
                 ppgYearCount ++
             }
@@ -24,7 +32,7 @@ class Match2 extends Component {
         let ppgEra
         let ppgDif        
 
-        if(ppgEraSum != 0){
+        if(ppgEraSum !== 0){
            ppgEraAvg =  ppgEraSum/ppgYearCount
            ppgEra = ppgEraAvg.toFixed(1)
            ppgPercentDif = ((this.props.player.ppg - ppgEraAvg)/ppgEraAvg)*100
@@ -36,7 +44,7 @@ class Match2 extends Component {
        let apgYearCount = 0
 
        this.props.data.forEach( year => {
-           if(year.avgApg != null){
+           if(year.avgApg !== null){
                apgEraSum += year.avgApg
                apgYearCount ++
            }
@@ -47,7 +55,7 @@ class Match2 extends Component {
        let apgEra
        let apgDif        
 
-       if(apgEraSum != 0){
+       if(apgEraSum !== 0){
           apgEraAvg =  apgEraSum/apgYearCount
           apgEra = apgEraAvg.toFixed(1)
           apgPercentDif = ((this.props.player.apg - apgEraAvg)/apgEraAvg)*100
@@ -59,7 +67,7 @@ class Match2 extends Component {
        let rpgYearCount = 0
 
        this.props.data.forEach( year => {
-           if(year.avgRpg != null){
+           if(year.avgRpg !== null){
                rpgEraSum += year.avgRpg
                rpgYearCount ++
            }
@@ -70,7 +78,7 @@ class Match2 extends Component {
        let rpgEra
        let rpgDif        
 
-       if(rpgEraSum != 0){
+       if(rpgEraSum !== 0){
           rpgEraAvg =  rpgEraSum/rpgYearCount
           rpgEra = rpgEraAvg.toFixed(1)
           rpgPercentDif = ((this.props.player.rpg - rpgEraAvg)/rpgEraAvg)*100
@@ -82,7 +90,7 @@ class Match2 extends Component {
        let bpgYearCount = 0
 
        this.props.data.forEach( year => {
-           if(year.avgBpg != null){
+           if(year.avgBpg !== null){
                bpgEraSum += year.avgBpg
                bpgYearCount ++
            }
@@ -93,7 +101,7 @@ class Match2 extends Component {
        let bpgEra
        let bpgDif        
 
-       if(bpgEraSum != 0){
+       if(bpgEraSum !== 0){
           bpgEraAvg =  bpgEraSum/bpgYearCount
           bpgEra = bpgEraAvg.toFixed(1)
           bpgPercentDif = ((this.props.player.bpg - bpgEraAvg)/bpgEraAvg)*100
@@ -105,7 +113,7 @@ class Match2 extends Component {
        let spgYearCount = 0
 
        this.props.data.forEach( year => {
-           if(year.avgSpg != null){
+           if(year.avgSpg !== null){
                spgEraSum += year.avgSpg
                spgYearCount ++
            }
@@ -116,7 +124,7 @@ class Match2 extends Component {
        let spgEra
        let spgDif        
 
-       if(spgEraSum != 0){
+       if(spgEraSum !== 0){
           spgEraAvg =  spgEraSum/spgYearCount
           spgEra = spgEraAvg.toFixed(1)
           spgPercentDif = ((this.props.player.spg - spgEraAvg)/spgEraAvg)*100
