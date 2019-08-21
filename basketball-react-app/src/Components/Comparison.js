@@ -31,7 +31,7 @@ import PlayerMatch from './PlayerMatch'
 
 class Comparison extends Component {
   constructor() {
-    super()
+    super();
 
     this.state= {
       

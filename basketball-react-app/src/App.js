@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison";
-import Home from "./Components/home/Home";
+import Home from "./Components/Home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 // import { chmod } from "fs";
@@ -11,9 +11,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      players: []
+      players: [],
+      matchup: []
     };
   }
+
+  handleClick = (player, evt) => {
+    evt.preventDefault();
+    console.log("clicked", player);
+    if (this.state.matchup.length < 2) {
+      this.setState({ matchup: [...this.state.matchup, { player }] });
+    }
+
+    console.log(this.state);
+  };
 
   getData = () => {
     axios.get("https://basketball-era.herokuapp.com").then(res => {
@@ -35,10 +46,18 @@ class App extends Component {
             <h1>Header</h1>
           </Link>
         </header>
-        <Search players={this.state.players}className="searchContainer" />
+        <Search
+          handleClick={this.handleClick}
+          players={this.state.players}
+          className="searchContainer"
+        />
         <main className="mainContainer">
           <Route path="/" exact render={routerProps => <Home />} />
-          <Route path="/compare" exact render={routerProps => <Comparison players={this.state.players} />} />
+          <Route
+            path="/compare"
+            exact
+            render={routerProps => <Comparison players={this.state.players} />}
+          />
         </main>
         <footer className="footerContainer">
           <h1>footer</h1>
@@ -46,7 +65,6 @@ class App extends Component {
       </div>
     );
   }
-};
-      
+}
 
 export default App;

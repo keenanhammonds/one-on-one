@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Route, Link } from "react-router-dom";
+import "./search.css";
 // import { userInfo } from "os";
 
 class Search extends Component {
@@ -15,12 +17,9 @@ class Search extends Component {
     this.setState({
       search: evt.target.value
     });
-    console.log(this.state);
   };
 
-  handleClick = evt => {
-    evt.preventDefault();
-  };
+  s;
 
   render() {
     const { search } = this.state;
@@ -33,12 +32,14 @@ class Search extends Component {
     const playerArr = [];
     const showPlayers = filteredPlayers.map(player => {
       playerArr.push(player.name);
-      if (playerArr.length < 12) {
+      if (playerArr.length < 13) {
         return (
-          <div>
-            <a>
-              <h3>{player.name}</h3>
-            </a>
+          <div key={player.name}>
+            <Link>
+              <h3 onClick={evt => this.props.handleClick(player, evt)}>
+                {player.name}
+              </h3>
+            </Link>
           </div>
         );
       }
