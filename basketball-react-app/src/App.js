@@ -16,12 +16,12 @@ class App extends Component {
     this.state = {
       players: [],
       matchup: []
+      
     };
   }
-
+  
   handleClick = (player, evt) => {
     evt.preventDefault();
-    console.log("clicked", player);
     if (this.state.matchup.length < 2) {
       this.setState({ matchup: [...this.state.matchup, { player }] });
     }
@@ -31,7 +31,7 @@ class App extends Component {
       this.setState({ matchup: [newArr] });
     }
 
-    console.log(this.state);
+    
   };
 
   handleReset = evt => {
@@ -76,6 +76,7 @@ class App extends Component {
                 handleReset={this.handleReset}
                 matchup={this.state.matchup}
                 players={this.state.players}
+                
               />
             )}
           />

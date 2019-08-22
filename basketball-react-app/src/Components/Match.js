@@ -11,17 +11,7 @@ class Match2 extends Component {
       data: []
     };
   }
-  // componentDidMount() {
-
-  //     let stats = {
-  //         ppg: ppgDif,
-  //         apg: apgDif,
-  //         rpg: rpgDif,
-  //         bpg: bpgDif,
-  //         spg: spgDif
-  //     }
-  //     this.props.compare(stats)
-  // }
+ 
 
   render() {
     let ppgDif;
