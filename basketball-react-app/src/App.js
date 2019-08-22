@@ -7,6 +7,7 @@ import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Create from './Components/Create'
 import Delete from './Components/Delete'
+import WebFont from 'webfontloader';
 
 class App extends Component {
   constructor() {
@@ -30,7 +31,7 @@ class App extends Component {
       const newArr = arr.pop()
       this.setState({ matchup: [newArr] });
     }
-    
+
     console.log(this.state);
   };
 

@@ -44,25 +44,25 @@ class Search extends Component {
       playerArr.push(player.name);
       if (playerArr.length <= 6) {
         return (
-          <div className="smallCard" key={player.name}>
-            <Link to="/compare">
+          <Link to="/compare">
+            <div className="smallCard" key={player.name}>
               <img
                 className="dib br4 pa1 ma2 grow bw1 shadow-7"
                 src={url}
                 onClick={this.resetSearch}
                 onClick={evt => this.props.handleClick(player, evt)}
               />
-            </Link>
-          </div>
+            </div>
+          </Link>
         );
       }
     });
     return (
       <div>
         <div>
-          <h3>Find A Player</h3>
+          <h2 className="pick-player-text">Pick A Player</h2>
           <input
-            className="search"
+            className="search-input"
             className="br2 bw2 shadow-5 "
             type="text"
             placeholder="player name"

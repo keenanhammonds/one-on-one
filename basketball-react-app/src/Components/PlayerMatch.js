@@ -32,7 +32,7 @@ class PlayerMatch extends Component {
           options={{ max: 25 }}
         >
           <Card
-            className="dib br4 pa1 ma2 grow bw1 shadow-7"
+          className="card"
             image={this.props.player.image}
           />
         </Tilt>

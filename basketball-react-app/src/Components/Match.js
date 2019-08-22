@@ -13,9 +13,12 @@ class Match2 extends Component {
             data: []
         }
     }
+
+    componentDidMount(){
+        // console.log(this.state)
+    }
     
     render(){
-       
        //creates the ppg numbers
         let ppgEraSum = 0 
         let ppgYearCount = 0
