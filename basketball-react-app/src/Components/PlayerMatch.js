@@ -3,6 +3,7 @@ import Card from "./Card";
 import Match from "./Match";
 import axios from "axios";
 import Tilt from "react-tilt";
+import "./card.css";
 import "tachyons";
 
 class PlayerMatch extends Component {
@@ -28,7 +29,7 @@ class PlayerMatch extends Component {
     return (
       <div>
         <Tilt className="Tilt" options={{ max: 25 }}>
-          <Card
+          <Card className="whole-card"
             className="dib br4 pa1 ma2 grow bw1 shadow-7"
             image={this.props.player.image}
             startYear={this.props.player.startYear}

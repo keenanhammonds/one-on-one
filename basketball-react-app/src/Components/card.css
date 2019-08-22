@@ -1,0 +1,14 @@
+.whole-card{
+    background-color:#fbf579;
+    padding: 10px;
+    border-radius: 20px;
+    height: 620px;
+    shadow: -8px;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 5px 10px #888888;
+}
+
+
+.card-img-top{
+    border-radius: 20px;
+}
