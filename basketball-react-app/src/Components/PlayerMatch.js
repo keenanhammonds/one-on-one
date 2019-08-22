@@ -3,7 +3,7 @@ import Card from "./Card";
 import Match from "./Match";
 import axios from "axios";
 import Tilt from "react-tilt";
-import "tachyons";
+import "tachyons";import "tachyons";
 
 class PlayerMatch extends Component {
   constructor() {
