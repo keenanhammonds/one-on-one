@@ -3,7 +3,11 @@
 import React, {Component} from 'react'
 import './Match2.css'
 
-
+let ppgDif
+let spgDif        
+let apgDif 
+let rpgDif        
+let bpgDif        
 
 class Match2 extends Component {
     constructor(){
@@ -13,9 +17,21 @@ class Match2 extends Component {
             data: []
         }
     }
-    
+    componentDidMount() {
+     
+     
+        let stats = {
+            ppg: ppgDif,
+            apg: apgDif,
+            rpg: rpgDif,
+            bpg: bpgDif,
+            spg: spgDif
+        }
+        this.props.compare(stats)
+    }
+
     render(){
-       
+       console.log(this.props.id)
        //creates the ppg numbers
         let ppgEraSum = 0 
         let ppgYearCount = 0
@@ -30,7 +46,7 @@ class Match2 extends Component {
         let ppgEraAvg
         let ppgPercentDif
         let ppgEra
-        let ppgDif        
+                
 
         if(ppgEraSum !== 0){
            ppgEraAvg =  ppgEraSum/ppgYearCount
@@ -53,7 +69,7 @@ class Match2 extends Component {
        let apgEraAvg
        let apgPercentDif
        let apgEra
-       let apgDif        
+              
 
        if(apgEraSum !== 0){
           apgEraAvg =  apgEraSum/apgYearCount
@@ -76,7 +92,7 @@ class Match2 extends Component {
        let rpgEraAvg
        let rpgPercentDif
        let rpgEra
-       let rpgDif        
+       
 
        if(rpgEraSum !== 0){
           rpgEraAvg =  rpgEraSum/rpgYearCount
@@ -99,7 +115,7 @@ class Match2 extends Component {
        let bpgEraAvg
        let bpgPercentDif
        let bpgEra
-       let bpgDif        
+
 
        if(bpgEraSum !== 0){
           bpgEraAvg =  bpgEraSum/bpgYearCount
@@ -122,7 +138,7 @@ class Match2 extends Component {
        let spgEraAvg
        let spgPercentDif
        let spgEra
-       let spgDif        
+
 
        if(spgEraSum !== 0){
           spgEraAvg =  spgEraSum/spgYearCount
@@ -131,6 +147,8 @@ class Match2 extends Component {
           spgDif =spgPercentDif.toFixed(1) 
        }
 
+       
+       
         return(
             <div className= "grid">
                 <span></span>

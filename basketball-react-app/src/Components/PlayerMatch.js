@@ -25,6 +25,7 @@ class PlayerMatch extends Component {
       });
   }
   render() {
+    
     return (
       <div>
         <Tilt
@@ -41,6 +42,8 @@ class PlayerMatch extends Component {
           className="match"
           player={this.props.player}
           data={this.state.data}
+          id= {this.props.id}
+          compare = {this.props.compare}
         />
         </div>
       </div>
