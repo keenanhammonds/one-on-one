@@ -16,12 +16,6 @@
 }
 
 
-.headerContainer {
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  /* border: 2px solid purple */
-}
 
 .searchContainer {
   grid-column-start: 1;
@@ -103,12 +97,7 @@ button {
   height: auto;
 }
 
-main{
-  height: auto;
-  border-top: 1px solid white;
-  border-left: 1px solid white;
 
-}
 
 
 img{

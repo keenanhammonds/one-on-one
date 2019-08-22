@@ -6,10 +6,17 @@ import "./header.css"
 class Header extends Component {
   render() {
      return (
+        
         <header className="headerContainer">
-          <h1>This is my header</h1>
-        <Link to="/">
-        </Link>
+          
+          <div className="topnav">
+        <a className="active" href="/">Home</a>
+        <a href="/compare">ONExONE</a>
+        <a href="/create">Add Players</a>
+        <a href="/update">Update Player</a>
+        <a href="/delete">Delete Player</a>
+      </div>
+    
       </header>
 
    

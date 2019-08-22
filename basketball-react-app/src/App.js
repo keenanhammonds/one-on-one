@@ -80,24 +80,7 @@ class App extends Component {
           <Route path="/delete" exact render={() => <Delete />} />
           <Route path="/update" exact render={() => <Update />} />
         </main>
-        <footer className="footerContainer">
-          <Link to='/compare'>
-          {" "}
-            <h3>Compare Players</h3>
-            </Link> 
-          <Link to="/create">
-            {" "}
-            <h3>Add Player</h3>
-          </Link>
-          <Link to="/update">
-            {" "}
-            <h3>Update Player</h3>
-          </Link>
-          <Link to="/delete">
-            {" "}
-            <h3>Delete Player</h3>
-          </Link>
-        </footer>
+      
       </div>
     );
   }
