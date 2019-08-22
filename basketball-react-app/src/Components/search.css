@@ -4,12 +4,6 @@
   cursor: pointer;
 }
 
-.searchContainer {
-  display: flex;
-  flex-flow: wrap;
-  border: 2px solid red;
-}
-
 .search {
   padding-left: 40px;
 }

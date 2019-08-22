@@ -1,0 +1,36 @@
+.headerContainer {
+    text-align: center;
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* border: 2px solid purple */
+  }
+
+  .topnav {
+    background-color: #0000;
+    overflow: hidden;
+    line-height: 50px;
+    padding-top: 30px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: grey;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: white;
+  }
