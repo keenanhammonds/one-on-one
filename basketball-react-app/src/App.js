@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison";
-import Home from "./Components/Home/Home";
+import Home from "./Components/home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Create from './Components/Create'
 import Delete from './Components/Delete'
+<<<<<<< HEAD
 import WebFont from 'webfontloader';
+=======
+import Update from './Components/Update'
+>>>>>>> e7a679f6eecd33360053b1a8a2746adc4d1cfad2
 
 class App extends Component {
   constructor() {
@@ -22,7 +26,6 @@ class App extends Component {
 
   handleClick = (player, evt) => {
     evt.preventDefault();
-    console.log("clicked", player);
     if (this.state.matchup.length < 2) {
       this.setState({ matchup: [...this.state.matchup, { player }] });
     } 
@@ -31,8 +34,13 @@ class App extends Component {
       const newArr = arr.pop()
       this.setState({ matchup: [newArr] });
     }
+<<<<<<< HEAD
 
     console.log(this.state);
+=======
+    
+    
+>>>>>>> e7a679f6eecd33360053b1a8a2746adc4d1cfad2
   };
 
 
@@ -77,9 +85,12 @@ class App extends Component {
           />
           <Route path="/create" exact render= {() => <Create/>}/>
           <Route path="/delete" exact render= {() => <Delete/>}/>
+          <Route path="/update" exact render= {() => <Update/>}/>
         </main>
         <footer className="footerContainer">
+        <Link to= "compare"> <h3>Compare Players</h3></Link>
         <Link to='/create'> <h3>Add Player</h3></Link>
+        <Link to='/update'> <h3>Update Player</h3></Link>
         <Link to='/delete'> <h3>Delete Player</h3></Link>
         </footer>
       </div>
