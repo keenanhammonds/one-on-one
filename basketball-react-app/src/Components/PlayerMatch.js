@@ -33,6 +33,7 @@ class PlayerMatch extends Component {
             image={this.props.player.image}
             startYear={this.props.player.startYear}
             endYear={this.props.player.endYear}
+            name = {this.props.player.name}
           />
         </Tilt>
         <div>
