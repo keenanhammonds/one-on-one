@@ -3,11 +3,7 @@
 import React, {Component} from 'react'
 import './Match2.css'
 
-let ppgDif
-let spgDif        
-let apgDif 
-let rpgDif        
-let bpgDif        
+       
 
 class Match2 extends Component {
     constructor(){
@@ -17,21 +13,27 @@ class Match2 extends Component {
             data: []
         }
     }
-    componentDidMount() {
+    // componentDidMount() {
      
      
-        let stats = {
-            ppg: ppgDif,
-            apg: apgDif,
-            rpg: rpgDif,
-            bpg: bpgDif,
-            spg: spgDif
-        }
-        this.props.compare(stats)
-    }
+    //     let stats = {
+    //         ppg: ppgDif,
+    //         apg: apgDif,
+    //         rpg: rpgDif,
+    //         bpg: bpgDif,
+    //         spg: spgDif
+    //     }
+    //     this.props.compare(stats)
+    // }
 
     render(){
-       console.log(this.props.id)
+       
+        let ppgDif
+        let spgDif        
+        let apgDif 
+        let rpgDif        
+        let bpgDif 
+        
        //creates the ppg numbers
         let ppgEraSum = 0 
         let ppgYearCount = 0
