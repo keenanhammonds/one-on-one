@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./search.css";
-import "tachyons"
+import { Route, Link } from "react-router-dom";
+import "tachyons";
 
 class Search extends Component {
   constructor() {
@@ -11,6 +12,13 @@ class Search extends Component {
       search: ""
     };
   }
+
+  resetSearch = e => {
+    e.preventDefault();
+    this.setState({
+      search: ""
+    });
+  };
 
   searchChange = evt => {
     this.setState({
@@ -37,11 +45,14 @@ class Search extends Component {
       if (playerArr.length <= 6) {
         return (
           <div className="smallCard" key={player.name}>
-            <img
-              className='dib br4 pa1 ma2 grow bw1 shadow-7'
-              src={url}
-              onClick={evt => this.props.handleClick(player, evt)}
-            />
+            <Link to="/compare">
+              <img
+                className="dib br4 pa1 ma2 grow bw1 shadow-7"
+                src={url}
+                onClick={this.resetSearch}
+                onClick={evt => this.props.handleClick(player, evt)}
+              />
+            </Link>
           </div>
         );
       }
@@ -52,7 +63,7 @@ class Search extends Component {
           <h3>Find A Player</h3>
           <input
             className="search"
-            className='br2 bw2 shadow-5 '
+            className="br2 bw2 shadow-5 "
             type="text"
             placeholder="player name"
             onChange={this.searchChange}

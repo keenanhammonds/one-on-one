@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison";
-import Home from "./Components/home/Home";
+import Home from "./Components/Home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Create from './Components/Create'
@@ -24,11 +24,24 @@ class App extends Component {
     console.log("clicked", player);
     if (this.state.matchup.length < 2) {
       this.setState({ matchup: [...this.state.matchup, { player }] });
+    } 
+    if (this.state.matchup.length === 2) {
+      const arr =  [...this.state.matchup, { player }]
+      const newArr = arr.pop()
+      this.setState({ matchup: [newArr] });
     }
-
+    
     console.log(this.state);
   };
 
+
+  handleReset = (evt) => {
+    evt.preventDefault();
+    this.setState({
+      matchup: []
+    })
+  }
+  
   getData = () => {
     axios.get("https://basketball-era.herokuapp.com").then(res => {
       this.setState({
@@ -54,12 +67,12 @@ class App extends Component {
           players={this.state.players}
           className="searchContainer"
         />
-        <main >
+        <main>
           <Route path="/" exact render={routerProps => <Home />} />
           <Route
             path="/compare"
             exact
-            render={routerProps => <Comparison matchup={this.state.matchup} players={this.state.players} />}
+            render={routerProps => <Comparison handleReset={this.handleReset} matchup={this.state.matchup} players={this.state.players} />}
           />
           <Route path="/create" exact render= {() => <Create/>}/>
           <Route path="/delete" exact render= {() => <Delete/>}/>

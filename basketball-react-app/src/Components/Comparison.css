@@ -1,13 +1,15 @@
 .cardsContainer * {
-    border: 4px solid black;
+    border: 1px solid black;
 
 
 }
 
+
+
 .cardsContainer {
     /* height: 200px; */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     /* display: flex; */
     /* justify-content: space-evenly; */
 }
