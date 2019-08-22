@@ -8,7 +8,8 @@ import "./App.css";
 import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
-import Update from './Components/Update';
+import Update from "./Components/Update";
+import Header from "./Components/Header";
 
 class App extends Component {
   constructor() {
@@ -56,11 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="headerContainer">
-          <Link to="/">
-            <h1>Header</h1>
-          </Link>
-        </header>
+        <Header />
         <Search
           handleClick={this.handleClick}
           players={this.state.players}
@@ -84,10 +81,10 @@ class App extends Component {
           <Route path="/update" exact render={() => <Update />} />
         </main>
         <footer className="footerContainer">
-          <Link to='/compare'>
-          {" "}
+          <Link to="/compare">
+            {" "}
             <h3>Compare Players</h3>
-            </Link> 
+          </Link>
           <Link to="/create">
             {" "}
             <h3>Add Player</h3>
