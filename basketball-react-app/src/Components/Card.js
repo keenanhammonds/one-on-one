@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import "./card.css"
 import "tachyons";
 
 class Card extends Component {
   render() {
     return (
-      <div className="card" style={{ width: "18rem" }}>
+      <div className="whole-card" style={{ width: "18rem" }}>
         <div style={{ height: "auto" }}>
           <img
             className="br4 pa1 ma2 bw1 shadow-7"
