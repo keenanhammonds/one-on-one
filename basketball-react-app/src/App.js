@@ -8,8 +8,13 @@ import "./App.css";
 import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
+<<<<<<< HEAD
 import Update from './Components/Update'
 import Header from "./Components/header";
+=======
+import Update from "./Components/Update";
+import Header from "./Components/Header";
+>>>>>>> f779ba42fea3b941b80367edc54cdff6803272d2
 
 class App extends Component {
   constructor() {
@@ -17,12 +22,12 @@ class App extends Component {
     this.state = {
       players: [],
       matchup: []
+      
     };
   }
-
+  
   handleClick = (player, evt) => {
     evt.preventDefault();
-    console.log("clicked", player);
     if (this.state.matchup.length < 2) {
       this.setState({ matchup: [...this.state.matchup, { player }] });
     }
@@ -32,7 +37,7 @@ class App extends Component {
       this.setState({ matchup: [newArr] });
     }
 
-    console.log(this.state);
+    
   };
 
   handleReset = evt => {
@@ -57,7 +62,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
+        <Header />
         <Search
           handleClick={this.handleClick}
           players={this.state.players}
@@ -73,6 +78,7 @@ class App extends Component {
                 handleReset={this.handleReset}
                 matchup={this.state.matchup}
                 players={this.state.players}
+                
               />
             )}
           />
@@ -80,7 +86,6 @@ class App extends Component {
           <Route path="/delete" exact render={() => <Delete />} />
           <Route path="/update" exact render={() => <Update />} />
         </main>
-      
       </div>
     );
   }
