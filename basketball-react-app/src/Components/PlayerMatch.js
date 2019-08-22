@@ -25,26 +25,24 @@ class PlayerMatch extends Component {
       });
   }
   render() {
-    
     return (
       <div>
-        <Tilt
-          className="Tilt"
-          options={{ max: 25 }}
-        >
+        <Tilt className="Tilt" options={{ max: 25 }}>
           <Card
             className="dib br4 pa1 ma2 grow bw1 shadow-7"
-            image={this.props.player.image} startYear ={this.props.player.startYear} endYear = {this.props.player.endYear}
+            image={this.props.player.image}
+            startYear={this.props.player.startYear}
+            endYear={this.props.player.endYear}
           />
         </Tilt>
         <div>
-        <Match
-          className="match"
-          player={this.props.player}
-          data={this.state.data}
-          id= {this.props.id}
-          compare = {this.props.compare}
-        />
+          <Match
+            className="match"
+            player={this.props.player}
+            data={this.state.data}
+            id={this.props.id}
+            compare={this.props.compare}
+          />
         </div>
       </div>
     );

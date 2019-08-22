@@ -13,7 +13,8 @@
     "react-tilt": "^0.1.4",
     "react-video-cover": "^1.2.2",
     "react-youtube": "^7.9.0",
-    "tachyons": "^4.11.1"
+    "tachyons": "^4.11.1",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

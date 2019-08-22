@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison";
-import Home from "./Components/home/Home";
+import Home from "./Components/Home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
-import Create from './Components/Create'
-import Delete from './Components/Delete'
-import Update from './Components/Update'
+import Create from "./Components/Create";
+import Delete from "./Components/Delete";
+import WebFont from "webfontloader";
 
 class App extends Component {
   constructor() {
@@ -18,30 +18,28 @@ class App extends Component {
     };
   }
 
-
-
   handleClick = (player, evt) => {
     evt.preventDefault();
+    console.log("clicked", player);
     if (this.state.matchup.length < 2) {
       this.setState({ matchup: [...this.state.matchup, { player }] });
-    } 
+    }
     if (this.state.matchup.length === 2) {
-      const arr =  [...this.state.matchup, { player }]
-      const newArr = arr.pop()
+      const arr = [...this.state.matchup, { player }];
+      const newArr = arr.pop();
       this.setState({ matchup: [newArr] });
     }
-    
-    
+
+    console.log(this.state);
   };
 
-
-  handleReset = (evt) => {
+  handleReset = evt => {
     evt.preventDefault();
     this.setState({
       matchup: []
-    })
-  }
-  
+    });
+  };
+
   getData = () => {
     axios.get("https://basketball-era.herokuapp.com").then(res => {
       this.setState({
@@ -72,17 +70,26 @@ class App extends Component {
           <Route
             path="/compare"
             exact
-            render={routerProps => <Comparison handleReset={this.handleReset} matchup={this.state.matchup} players={this.state.players} />}
+            render={routerProps => (
+              <Comparison
+                handleReset={this.handleReset}
+                matchup={this.state.matchup}
+                players={this.state.players}
+              />
+            )}
           />
-          <Route path="/create" exact render= {() => <Create/>}/>
-          <Route path="/delete" exact render= {() => <Delete/>}/>
-          <Route path="/update" exact render= {() => <Update/>}/>
+          <Route path="/create" exact render={() => <Create />} />
+          <Route path="/delete" exact render={() => <Delete />} />
         </main>
         <footer className="footerContainer">
-        <Link to= "compare"> <h3>Compare Players</h3></Link>
-        <Link to='/create'> <h3>Add Player</h3></Link>
-        <Link to='/update'> <h3>Update Player</h3></Link>
-        <Link to='/delete'> <h3>Delete Player</h3></Link>
+          <Link to="/create">
+            {" "}
+            <h3>Add Player</h3>
+          </Link>
+          <Link to="/delete">
+            {" "}
+            <h3>Delete Player</h3>
+          </Link>
         </footer>
       </div>
     );

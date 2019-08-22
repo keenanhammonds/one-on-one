@@ -3,27 +3,28 @@ import "./Comparison.css";
 import PlayerMatch from "./PlayerMatch";
 
 class Comparison extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
 
     this.state = {
       comparison: []
-    }
+    };
   }
-  compare = (stats) =>{
+  compare = stats => {
     var joined = this.state.comparison.concat(stats);
-         this.setState({ comparison: joined })  
-   
-    
-    }
-    
+    this.setState({ comparison: joined });
+  };
 
-  
   render() {
     let playerMatch = this.props.matchup.map((player, i) => {
-      return(
-         <PlayerMatch id={i+1} key={i} player={player.player} compare = {this.compare}/>
-         );
+      return (
+        <PlayerMatch
+          id={i + 1}
+          key={i}
+          player={player.player}
+          compare={this.compare}
+        />
+      );
     });
 
     return (
