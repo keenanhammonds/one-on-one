@@ -15,6 +15,7 @@ class Card extends Component {
           />
         </div>
         <div className="card-body" style={{ textAlign: "center" }}>
+          <h1>{this.props.name}</h1>
           <h3>Seasons Played:</h3>
           <h2>
             {this.props.startYear} - {this.props.endYear}

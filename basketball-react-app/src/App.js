@@ -8,6 +8,7 @@ import "./App.css";
 import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
+import Update from './Components/Update'
 
 class App extends Component {
   constructor() {
@@ -80,11 +81,20 @@ class App extends Component {
           />
           <Route path="/create" exact render={() => <Create />} />
           <Route path="/delete" exact render={() => <Delete />} />
+          <Route path="/update" exact render={() => <Update />} />
         </main>
         <footer className="footerContainer">
+          <Link to='/compare'>
+          {" "}
+            <h3>Compare Players</h3>
+            </Link> 
           <Link to="/create">
             {" "}
             <h3>Add Player</h3>
+          </Link>
+          <Link to="/update">
+            {" "}
+            <h3>Update Player</h3>
           </Link>
           <Link to="/delete">
             {" "}
