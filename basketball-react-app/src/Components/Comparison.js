@@ -12,17 +12,13 @@ class Comparison extends Component {
   }
   compare = (stats) =>{
     var joined = this.state.comparison.concat(stats);
-    if(this.state.comparison.length === 0 || this.state.comparison.length === 2){
-      this.clearState()
-      this.setState({ comparison: joined })  
-    }else{
-    this.setState({ comparison: joined })
+         this.setState({ comparison: joined })  
+   
     
     }
-}
-  clearState = () => {
-    this.setState({comparison: []})
-  }
+    
+
+  
   render() {
     let playerMatch = this.props.matchup.map((player, i) => {
       return(
