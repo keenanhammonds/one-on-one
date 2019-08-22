@@ -5,6 +5,7 @@ import Comparison from "./Components/Comparison";
 import Home from "./Components/home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
+import Create from './Components/Create'
 
 class App extends Component {
   constructor() {
@@ -59,9 +60,10 @@ class App extends Component {
             exact
             render={routerProps => <Comparison matchup={this.state.matchup} players={this.state.players} />}
           />
+          <Route path="/create" exact render= {() => <Create/>}/>
         </main>
         <footer className="footerContainer">
-          <h1>footer</h1>
+        <Link to='/create'> <h3>Add Player</h3></Link>
         </footer>
       </div>
     );
