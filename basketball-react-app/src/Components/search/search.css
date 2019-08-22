@@ -1,0 +1,27 @@
+.searchContainer {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+.search {
+    
+        padding:.2rem .2rem;
+        margin: 20px;
+        height: 20px;
+        width: 200px;
+      
+}
+button{
+    align-self:center;
+    padding:.2rem .2rem;
+    margin:0 1rem;
+    background: #424242;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1c1c1c;
+  &:hover{
+       box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+    } 
+  }
+  

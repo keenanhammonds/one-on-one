@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Search from "./Components/Search";
+import Search from "./Components/search/Search";
 import Comparison from "./Components/Comparison";
 import Home from "./Components/home/Home";
 import Header from "./Components/header/Header";
@@ -33,8 +33,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="headerContainer">
+          <Header></Header>
           <Link to="/">
-            <h1>Header</h1>
           </Link>
         </header>
         <Search players={this.state.players}className="searchContainer" />

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 // import { userInfo } from "os";
+import "./search.css";
 
 class Search extends Component {
   constructor() {
@@ -45,7 +46,6 @@ class Search extends Component {
     });
     return (
       <div>
-        <h3>Find A Player</h3>
         <input
           className="search"
           type="text"
