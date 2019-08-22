@@ -4,10 +4,12 @@
 
 }
 
+
+
 .cardsContainer {
     /* height: 200px; */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     /* display: flex; */
     /* justify-content: space-evenly; */
 }

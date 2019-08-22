@@ -66,3 +66,7 @@ button{
   height: 30px;
   width: 200px;
 }
+
+.card{
+  padding-left: 90px;  
+}

@@ -22,8 +22,8 @@ class PlayerMatch extends Component {
     render(){
         return(
             <div>
-                <Card image = {this.props.player.image}/>
-                <Match player = {this.props.player} data = {this.state.data}/>
+                <Card className="card" image = {this.props.player.image}/>
+                <Match className="match" player = {this.props.player} data = {this.state.data}/>
             </div>
         )
     }

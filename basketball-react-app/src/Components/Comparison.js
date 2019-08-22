@@ -14,7 +14,7 @@ class Comparison extends Component {
      
     
     return (
-      <div>
+      <div className="containerContainer">
       <div className="cardsContainer">
             {playerMatch}
         </div>
