@@ -2,6 +2,13 @@
     .mainContainer{
       border: 2px solid black;
       width: 1170px;
+     
       
     }
+    }
+    main{
+      height: auto;
+      padding: 50px;
+
+    
     }

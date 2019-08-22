@@ -3,14 +3,25 @@ import {Route, Link} from "react-router-dom";
 import "./header.css"
 
 
-class header extends Component {
+class Header extends Component {
   render() {
      return (
-     
+        
+        <header className="headerContainer">
+          
+          <div className="topnav">
+        <a className="active" href="/">Home</a>
+        <a href="/compare">ONExONE</a>
+        <a href="/create">Add Players</a>
+        <a href="/update">Update Player</a>
+        <a href="/delete">Delete Player</a>
+      </div>
+    
+      </header>
 
    
       );
     }
   }
 
-export default header;
+export default Header;
