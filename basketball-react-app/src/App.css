@@ -29,13 +29,12 @@
 }
 
 .footerContainer {
-  margin-top: 300px;
+  margin-top: 200px;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
-  justify-content: space-around;
-  position: fixed;
+  justify-content: space-evenly;
   bottom: 0px;
   width: 100%;
   /* border: 2px solid yellow */
