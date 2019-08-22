@@ -30,7 +30,9 @@
   text-align: center;
   align-self: end;
   grid-column-start: 1;
-  grid-column-end: 3
+  grid-column-end: 3;
+  display: flex;
+  justify-content: space-around;
 }
 
 .card{
