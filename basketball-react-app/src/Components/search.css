@@ -1,12 +1,27 @@
-.smallCard {
-  width: 140px;
-  height: auto;
-  cursor: pointer;
+
+
+.smallCard{
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+    padding: 0px 5px;
 }
 
-.search {
-  padding-left: 40px;
+.searchContainer{
+    display: flex;
+    flex-flow: wrap;
+    margin: 10px;
 }
 
-.pick-player-text {
+.search-input{
+    padding-left: 40px;
+    margin: 10px;
 }
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: lighter;
+    margin: 50px;
+
+}
+
