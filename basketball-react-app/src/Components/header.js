@@ -3,14 +3,18 @@ import {Route, Link} from "react-router-dom";
 import "./header.css"
 
 
-class header extends Component {
+class Header extends Component {
   render() {
      return (
-     
+        <header className="headerContainer">
+          <h1>This is my header</h1>
+        <Link to="/">
+        </Link>
+      </header>
 
    
       );
     }
   }
 
-export default header;
+export default Header;
