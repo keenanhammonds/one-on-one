@@ -18,21 +18,27 @@
 .headerContainer {
   text-align: center;
   grid-column-start: 1;
-  grid-column-end: 3
+  grid-column-end: 3;
+  /* border: 2px solid purple */
 }
 
 .searchContainer {
   grid-column-start: 1;
   grid-row-start: 2;
+  /* border: 2px solid green */
 }
 
 .footerContainer {
+  margin-top: 300px;
   text-align: center;
-  align-self: end;
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  /* border: 2px solid yellow */
 }
 
 .card{
