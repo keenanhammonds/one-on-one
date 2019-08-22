@@ -8,7 +8,7 @@ import "./App.css";
 import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
-import Update from './Components/Update'
+import Update from './Components/Update';
 
 class App extends Component {
   constructor() {
