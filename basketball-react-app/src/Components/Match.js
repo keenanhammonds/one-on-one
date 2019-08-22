@@ -2,6 +2,10 @@
 
 import React, { Component } from "react";
 import "./Match2.css";
+import Chart from './Chart'
+
+
+
 
 class Match2 extends Component {
   constructor() {
@@ -11,17 +15,7 @@ class Match2 extends Component {
       data: []
     };
   }
-  // componentDidMount() {
-
-  //     let stats = {
-  //         ppg: ppgDif,
-  //         apg: apgDif,
-  //         rpg: rpgDif,
-  //         bpg: bpgDif,
-  //         spg: spgDif
-  //     }
-  //     this.props.compare(stats)
-  // }
+ 
 
   render() {
     let ppgDif;
@@ -139,9 +133,14 @@ class Match2 extends Component {
       spgPercentDif = ((this.props.player.spg - spgEraAvg) / spgEraAvg) * 100;
       spgDif = spgPercentDif.toFixed(1);
     }
+    let playerData = [this.props.player.ppg,this.props.player.apg,this.props.player.rpg,this.props.player.bpg,this.props.player.spg]
 
+    let eraData = [ppgEra,apgEra,rpgEra,bpgEra, spgEra]
+
+    let difference = [ppgDif,apgDif,rpgDif,bpgDif,spgDif]
     return (
-      <div className="grid">
+     <div>
+     {/* <div className="grid">
         <span />
         <span>Player</span>
         <span>Top for Era</span>
@@ -171,6 +170,9 @@ class Match2 extends Component {
         <div>{this.props.player.spg}</div>
         <div>{spgEra}</div>
         <div>{spgDif}%</div>
+        
+      </div> */}
+      <Chart playerData = {playerData} eraData = {eraData} difference = {difference}/>
       </div>
     );
   }

@@ -13,7 +13,7 @@ class Comparison extends Component {
   compare = stats => {
     var joined = this.state.comparison.concat(stats);
     this.setState({ comparison: joined });
-  };
+  }
 
   render() {
     let playerMatch = this.props.matchup.map((player, i) => {
