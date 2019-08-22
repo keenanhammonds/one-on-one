@@ -6,6 +6,7 @@ import Home from "./Components/home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Create from './Components/Create'
+import Delete from './Components/Delete'
 
 class App extends Component {
   constructor() {
@@ -61,9 +62,11 @@ class App extends Component {
             render={routerProps => <Comparison matchup={this.state.matchup} players={this.state.players} />}
           />
           <Route path="/create" exact render= {() => <Create/>}/>
+          <Route path="/delete" exact render= {() => <Delete/>}/>
         </main>
         <footer className="footerContainer">
         <Link to='/create'> <h3>Add Player</h3></Link>
+        <Link to='/delete'> <h3>Delete Player</h3></Link>
         </footer>
       </div>
     );
