@@ -4,17 +4,23 @@
     width: 140px;
     height: auto;
     cursor: pointer;
+    padding: 0px 5px;
 }
 
 .searchContainer{
     display: flex;
     flex-flow: wrap;
+    margin: 10px;
 }
 
-.search{
+.search-input{
     padding-left: 40px;
+    margin: 10px;
 }
 
-.pick-player-text{
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: lighter;
+    margin: 50px;
 
 }

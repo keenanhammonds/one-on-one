@@ -60,7 +60,7 @@ class Search extends Component {
     return (
       <div>
         <div>
-          <h2 className="pick-player-text">Pick A Player</h2>
+          <h2 className="pick-player-text">Choose a player</h2>
           <input
             className="search-input"
             className="br2 bw2 shadow-5 "
