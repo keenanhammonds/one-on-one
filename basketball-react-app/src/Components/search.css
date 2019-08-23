@@ -11,17 +11,20 @@
     display: flex;
     flex-flow: wrap;
     margin: 10px;
+    
 }
 
-.search-input{
-    padding-left: 40px;
-    margin: 10px;
+.br2{
+    margin-left: 60px;
+    background-color: white;
+    
 }
 
 h2 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: lighter;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: bold;
     margin: 50px;
+    color: black;
 
 }
 

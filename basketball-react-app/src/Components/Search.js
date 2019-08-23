@@ -62,7 +62,7 @@ class Search extends Component {
         <div>
           <h2 className="pick-player-text">Choose a player</h2>
           <input
-            className="search-input"
+            className="search"
             className="br2 bw2 shadow-5 "
             type="text"
             placeholder="player name"
