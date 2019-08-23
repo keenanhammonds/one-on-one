@@ -28,7 +28,7 @@ class Comparison extends Component {
     });
 
     return (
-      <div>
+      <div className="mainAppContainer">
         <div>
           <button onClick={this.props.handleReset}>reset</button>
         </div>

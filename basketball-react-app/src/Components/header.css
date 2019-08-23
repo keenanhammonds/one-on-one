@@ -1,14 +1,22 @@
 .headerContainer {
     text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    text-shadow: 1px 1px 2px #000000;
+    border-bottom-color: #f2f2f2;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+  }
+
+  .logo{
+    height: 85px;
+    padding-right: 405px;
+    padding-top: 20px;
   }
 
   .topnav {
     background-color: #0000;
     overflow: hidden;
     line-height: 50px;
-    padding-top: 30px;
   }
   
   .topnav a {
@@ -20,6 +28,7 @@
     font-family: 'Yantramanav', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 2px black;
   }
   
   .topnav a:hover {
