@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Components/Search";
 import Comparison from "./Components/Comparison";
-import Home from "./Components/home/Home";
+import Home from "./Components/Home/Home";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
 import Update from "./Components/Update";
-import Header from "./Components/Header";
+import Header from "./Components/header";
 
 class App extends Component {
   constructor() {
