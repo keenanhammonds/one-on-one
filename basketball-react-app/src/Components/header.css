@@ -1,17 +1,22 @@
 .headerContainer {
     text-align: center;
-    
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: #FF9933;
-    /* border: 2px solid purple */
+    background-color:black;
+    text-shadow: 1px 1px 2px #000000;
+    border-bottom-color: #f2f2f2;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+  }
+
+  .logo{
+    height: 85px;
+    padding-right: 405px;
   }
 
   .topnav {
     background-color: #0000;
     overflow: hidden;
     line-height: 50px;
-    padding-top: 30px;
   }
   
   /* Style the links inside the navigation bar */

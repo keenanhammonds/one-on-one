@@ -9,7 +9,8 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background-image: linear-gradient(to top right,black,#000080,#0000CD,white, #4169E1,#00BFFF);
+  background-color: #b82601;
+  /* background-image: linear-gradient(to top right,black,#000080,#0000CD,white, #4169E1,#00BFFF); */
   color: white;
 }
 
@@ -23,8 +24,11 @@
 
 
 .searchContainer {
+  width: 340px;
+  background-color: #845F70;
   grid-column-start: 1;
   grid-row-start: 2;
+  height: auto;
   /* border: 2px solid green */
 }
 
@@ -65,28 +69,6 @@ button {
   font-style: normal;
   letter-spacing: 2px;
 }
-/* .button > div {
-      color: #999;
-    font-size: 10px;
-    font-family: Helvetica Neue;
-    font-weight: initial;
-    font-style: normal;
-    text-align: center;
-    margin: 0px 0px 0px 0px
-    }
-    .button > i {
-      font-size: 1em;
-    border-radius: 0px;
-    border: 0px solid transparent;
-    border-width: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    position: static
-    }
-    .button > .ld {
-      font-size: initial
-    }
- } */
 
 .search {
   padding: 0.2rem 0.2rem;
