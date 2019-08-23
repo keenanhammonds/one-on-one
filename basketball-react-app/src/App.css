@@ -9,7 +9,8 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background-image: linear-gradient(to top right,black,#000080,#0000CD,white, #4169E1,#00BFFF);
+  background-color: #b82601;
+  /* background-image: linear-gradient(to top right,black,#000080,#0000CD,white, #4169E1,#00BFFF); */
   color: white;
 }
 
