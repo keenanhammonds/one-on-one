@@ -9,8 +9,10 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background-color: #b82601;
-  /* background-image: linear-gradient(to top right,black,#000080,#0000CD,white, #4169E1,#00BFFF); */
+  background: #F3904F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   color: white;
 }
 
@@ -81,7 +83,7 @@ button {
   padding-left: 90px;
   height: auto;
 }
-=
+
 main {
   height: auto;
 }

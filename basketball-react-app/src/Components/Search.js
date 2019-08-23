@@ -67,6 +67,7 @@ class Search extends Component {
             placeholder="player name"
             onChange={this.searchChange}
           />
+
           <div className="allCardsContainer">{showPlayers}</div>
         </div>
       </div>

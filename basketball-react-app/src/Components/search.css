@@ -1,3 +1,7 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+
+
 .smallCard {
   width: 140px;
   height: auto;
@@ -5,8 +9,7 @@
   padding: 5px 5px;
 }
 
-.pick-player-text {
-}
+
 
 .allCardsContainer {
   display: flex;
@@ -28,16 +31,18 @@
 }
 
 .search-input {
-  padding-left: 40px;
+  padding-left: 90px;
   padding-right: 50px;
   margin: 10px;
   right: 100px;
   text-shadow: 1px 1px 2px #000000;
-    color: orange
+  color: orange;
 }
 
 h2 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: lighter;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
   margin: 50px;
+  text-shadow: 1px 1px 2px #000000;
+
 }
