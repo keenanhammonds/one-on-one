@@ -9,14 +9,14 @@
 
   .logo{
     height: 85px;
-    padding-right: 405px;
+    padding-right: 500px;
     padding-top: 20px;
   }
 
   .topnav {
     background-color: #0000;
     overflow: hidden;
-    line-height: 50px;
+    line-height: 30px;
   }
   
   .topnav a {
