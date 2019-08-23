@@ -1,36 +1,41 @@
 .headerContainer {
     text-align: center;
-    
-    grid-column-start: 1;
-    grid-column-end: 3;
-    /* border: 2px solid purple */
+    text-shadow: 1px 1px 2px #000000;
+    border-bottom-color: #f2f2f2;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+  }
+
+  .logo{
+    height: 85px;
+    padding-right: 500px;
+    padding-top: 20px;
   }
 
   .topnav {
     background-color: #0000;
     overflow: hidden;
-    line-height: 50px;
-    padding-top: 30px;
+    line-height: 30px;
   }
   
-  /* Style the links inside the navigation bar */
   .topnav a {
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 2px black;
   }
   
-  /* Change the color of links on hover */
   .topnav a:hover {
     background-color: grey;
     color: black;
   }
   
-  /* Add a color to the active/current link */
   .topnav a.active {
-    color: white;
+    color: red ;
   }

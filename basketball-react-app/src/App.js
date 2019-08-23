@@ -9,7 +9,7 @@ import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
 import Update from "./Components/Update";
-import Header from "./Components/Header";
+import Header from "./Components/header";
 
 class App extends Component {
   constructor() {

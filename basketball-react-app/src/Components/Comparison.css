@@ -1,13 +1,28 @@
-.cardsContainer * {
+.mainAppContainer{
+   
+    margin-left: 50px;
+    
+  
 
 }
-
-
 
 .cardsContainer {
     /* height: 200px; */
     display: flex;
     justify-content: center;
     /* display: flex; */
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
 }
+ .reset-btn {
+     border-radius: 50%;
+     height: 50px;
+     width: 100px;
+     font-size: 30px;
+     font-family: 'Yantramanav', sans-serif;
+    font-weight: bold;
+    outline: none;
+     }
+ .reset-btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+ }

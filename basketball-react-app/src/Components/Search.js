@@ -58,17 +58,17 @@ class Search extends Component {
       }
     });
     return (
-      <div>
+      <div className="searchbar-container">
         <div>
           <h2 className="pick-player-text">Choose a player</h2>
           <input
             className="search-input"
-            className="br2 bw2 shadow-5 "
             type="text"
             placeholder="player name"
             onChange={this.searchChange}
           />
-          <div className="searchContainer">{showPlayers}</div>
+
+          <div className="allCardsContainer">{showPlayers}</div>
         </div>
       </div>
     );

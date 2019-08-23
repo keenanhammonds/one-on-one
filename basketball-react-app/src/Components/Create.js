@@ -70,7 +70,7 @@ class Create extends Component {
 
     render(){
         return(
-        <div>
+        <div className="addContainer">
             <h1>Add Player</h1>
             <form>
                 <div>

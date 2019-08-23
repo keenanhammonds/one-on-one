@@ -1,27 +1,52 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
 
-.smallCard{
-    width: 140px;
-    height: auto;
-    cursor: pointer;
-    padding: 0px 5px;
+
+.smallCard {
+  width: 140px;
+  height: auto;
+  cursor: pointer;
+  padding: 5px 5px;
 }
 
-.searchContainer{
-    display: flex;
-    flex-flow: wrap;
-    margin: 10px;
+
+
+.allCardsContainer {
+  display: flex;
+  flex-flow: wrap;
+  margin: 5px;
+  background-color: #062f4f;
+  border-radius: 40px;
 }
 
-.search-input{
-    padding-left: 40px;
-    margin: 10px;
+.searchbar-container {
+  background-color: white;
+  width: 345px;
+  border-radius: 30px;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.search-input {
+  padding-left: 95px;
+  padding-right: 50px;
+  margin: 10px;
+  margin-top: -10px;
+  right: 100px;
+  text-shadow: 1px 1px 2px #000000;
+  color: orange;
 }
 
 h2 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: lighter;
-    margin: 50px;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
+  margin: 50px;
+  margin-top:20px;
+  text-shadow: 1px 1px 2px #000000;
 
 }
-
