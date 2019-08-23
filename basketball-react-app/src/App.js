@@ -8,13 +8,8 @@ import "./App.css";
 import Create from "./Components/Create";
 import Delete from "./Components/Delete";
 import WebFont from "webfontloader";
-<<<<<<< HEAD
-import Update from './Components/Update'
-import Header from "./Components/header";
-=======
 import Update from "./Components/Update";
-import Header from "./Components/Header";
->>>>>>> f779ba42fea3b941b80367edc54cdff6803272d2
+import Header from "./Components/header";
 
 class App extends Component {
   constructor() {
