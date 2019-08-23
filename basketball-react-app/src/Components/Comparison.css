@@ -1,5 +1,7 @@
 .mainAppContainer{
-    background-image: image('https://media.giphy.com/media/wphRdusxTbbfW/giphy.gif')
+   
+    margin-left: 50px;
+    
 }
 
 
@@ -9,5 +11,5 @@
     display: flex;
     justify-content: center;
     /* display: flex; */
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
 }
