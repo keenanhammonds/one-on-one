@@ -30,8 +30,6 @@ Run npm start
 npm start
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
 To run tests in the command line run npm test
@@ -40,17 +38,15 @@ To run tests in the command line run npm test
 npm test
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
 to deploy change into the build directory and run npm deploy
+
+
+```
+cd build
+```
 
 ```
 npm deploy
@@ -58,10 +54,10 @@ npm deploy
 
 ## Built With
 
-* [React](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Mongo](https://maven.apache.org/) - Dependency Management
-* [Express](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [Node](') - 
+* [React](https://reactjs.org) 
+* [Mongo](https://www.mongodb.com/)
+* [Express](https://expressjs.com/) 
+* [Node](https://nodejs.org/en/)    
 
 
 ## Contributing
@@ -74,18 +70,16 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Victor Johnson** - *Initial work* - [General Assembly](https://github.com/PurpleBooth)
-* **Keenan Hammonds** - [General Assembly]()
+* **Victor Johnson** 
+* **Keenan Hammonds**
 
-* **Susej Roffe** [Genereal Assembly]()
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
+* **Susej Roffe**
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+
+* [NBA.com](NBA.COM) player stats
+* [2kmtcentral](2kmtcentral.com) for some of the card data
