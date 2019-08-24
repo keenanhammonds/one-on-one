@@ -30,7 +30,6 @@ class PlayerMatch extends Component {
       <div>
         <Tilt className="Tilt" options={{ max: 25 }}>
           <Card className="whole-card"
-            className="dib br4 pa1 ma2 grow bw1 shadow-7"
             image={this.props.player.image}
             startYear={this.props.player.startYear}
             endYear={this.props.player.endYear}

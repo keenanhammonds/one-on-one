@@ -8,10 +8,9 @@ class Card extends Component {
       <div className="whole-card" style={{ width: "18rem" }}>
         <div style={{ height: "auto" }}>
           <img
-            className="br4 pa1 ma2 bw1 shadow-7"
             className="card-img-top"
             src={this.props.image}
-            alt="Card image cap"
+            alt="Card cap"
             style={{ height: "400px" }}
           />
         </div>

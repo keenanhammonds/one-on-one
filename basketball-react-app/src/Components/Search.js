@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./search.css";
-import { Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import "tachyons";
 
 class Search extends Component {
@@ -38,6 +37,7 @@ class Search extends Component {
 
     const playerArr = [];
 
+    // eslint-disable-next-line array-callback-return
     const showPlayers = filteredPlayers.map(player => {
       const url = player.image;
 
@@ -48,8 +48,10 @@ class Search extends Component {
             <div className="smallCard" key={player.name}>
               <img
                 className="dib br4 pa1 ma2 grow bw1 shadow-7"
+                alt="player card"
                 src={url}
                 onClick={this.resetSearch}
+                // eslint-disable-next-line react/jsx-no-duplicate-props
                 onClick={evt => this.props.handleClick(player, evt)}
               />
             </div>

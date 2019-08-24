@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import tachyons from 'tachyons'
 
 import Axios from 'axios';
 

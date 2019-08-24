@@ -71,9 +71,9 @@ class Create extends Component {
     render(){
         return(
         <div className="addContainer">
-            <h1>Add Player</h1>
+            <h1>Add Your Player</h1>
             <form>
-                <div>
+                <div> 
                     <span>Player Name: </span><input name='name' placeholder="Player Name" value ={this.state.name} onChange = {this.handleName}></input>
                 </div>
                 <div>
