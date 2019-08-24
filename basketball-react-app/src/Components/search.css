@@ -15,13 +15,8 @@
   display: flex;
   flex-flow: wrap;
   margin: 5px;
-<<<<<<< HEAD
-  background-color: #0780;
-  
-=======
   background-color: #062f4f;
   border-radius: 40px;
->>>>>>> 841808c5889981a39ef32c3666f3d44faa86e759
 }
 
 .searchbar-container {
