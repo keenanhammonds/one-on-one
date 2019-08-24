@@ -10,12 +10,21 @@ To get started you will need to fork and clone the repository, cd into the baske
 
 What things you need to install the software and how to install them
 
-Node Package Manager
+Node
 
+To check if you have node run
 
 ```
-Give examples
+node -v
 ```
+
+To check if you have Node Package Manager run
+
+```
+npm -v
+```
+
+
 
 ### Installing
 
