@@ -1,3 +1,7 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+
+
 .smallCard {
   width: 140px;
   height: auto;
@@ -5,15 +9,19 @@
   padding: 5px 5px;
 }
 
-.pick-player-text {
-}
+
 
 .allCardsContainer {
   display: flex;
   flex-flow: wrap;
   margin: 5px;
+<<<<<<< HEAD
   background-color: #0780;
   
+=======
+  background-color: #062f4f;
+  border-radius: 40px;
+>>>>>>> 841808c5889981a39ef32c3666f3d44faa86e759
 }
 
 .searchbar-container {
@@ -25,19 +33,25 @@
   font-size: 20px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .search-input {
-  padding-left: 40px;
+  padding-left: 95px;
   padding-right: 50px;
   margin: 10px;
+  margin-top: -10px;
   right: 100px;
   text-shadow: 1px 1px 2px #000000;
-    color: orange
+  color: orange;
 }
 
 h2 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: lighter;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
   margin: 50px;
+  margin-top:20px;
+  text-shadow: 1px 1px 2px #000000;
+
 }

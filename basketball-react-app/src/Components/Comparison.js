@@ -29,9 +29,7 @@ class Comparison extends Component {
 
     return (
       <div className="mainAppContainer">
-        <div>
-          <button onClick={this.props.handleReset}>reset</button>
-        </div>
+          <button className="reset-btn" onClick={this.props.handleReset}>reset</button>
         <div className="cardsContainer">{playerMatch}</div>
         {/* insert win logic component here, bring results from the lower components to state here */}
       </div>
