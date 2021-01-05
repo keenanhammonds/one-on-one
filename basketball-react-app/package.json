@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@progress/kendo-react-animation": "^3.2.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.11",
